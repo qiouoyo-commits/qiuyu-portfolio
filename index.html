@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Qiuyu Zhang | Project Timeline</title>
+    <meta
+      name="description"
+      content="A timeline portfolio of architecture and computation projects by Qiuyu Zhang."
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./data.js"></script>
+    <script defer src="./index.js"></script>
+  </head>
+  <body class="page page--home" data-page="index" data-root="..">
+    <div class="page-glow page-glow--a"></div>
+    <div class="page-glow page-glow--b"></div>
+
+    <header class="home-hero shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Qiuyu Zhang</p>
+        <h1 class="display">
+          A timeline of projects shaped by public space, material systems, and computational reading.
+        </h1>
+        <p class="lede">
+          This portfolio site brings architecture studios and computation research into one sequence:
+          from folding furniture and net-zero housing to EEG-assisted street analysis and interactive
+          lilong installations.
+        </p>
+      </div>
+
+      <div class="hero-panel">
+        <div class="hero-panel__top">
+          <span class="hero-chip">Architecture</span>
+          <span class="hero-chip hero-chip--alt">Computation</span>
+        </div>
+        <div class="hero-stats" id="hero-stats"></div>
+        <p class="hero-note">
+          Open a project to browse its page sequence as an editorial story, with computation work
+          automatically corrected to the proper orientation on screen.
+        </p>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="toolbar" aria-label="Project filters">
+        <div class="toolbar__label">View</div>
+        <div class="filters" id="filters"></div>
+      </section>
+
+      <section class="timeline-wrap">
+        <div class="section-head">
+          <p class="section-kicker">Homepage</p>
+          <h2 class="section-title">Project Timeline</h2>
+        </div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+    </main>
+  </body>
+</html>
