@@ -9,6 +9,10 @@
     });
   }
 
+  function single(folder, prefix, index) {
+    return [image(folder, prefix, index)];
+  }
+
   var architecturePrefix = "Portfolio_Architecture_QiuyuZhang";
   var computationPrefix = "Portfolio_Computation_QiuyuZhang";
 
@@ -17,46 +21,25 @@
     strapline: "Spatial systems, computational tools, and civic atmospheres.",
     projects: [
       {
-        slug: "folding-fold-chair",
-        title: "Folding Fold Chair",
-        subtitle: "A compact furniture study exploring simple joints, collapse, and reuse.",
+        slug: "living-monument",
+        title: "The Living Monument",
+        subtitle: "A temporary civic pavilion that reframes contested memory in public space.",
         category: "Architecture",
-        season: "Fall 2018",
-        year: 2018,
-        location: "Montreal, Canada",
+        season: "Winter 2021",
+        year: 2021,
+        location: "Place d'Armes, Montreal",
         summary:
-          "An early construction studio exercise focused on folding logic, efficient assembly, and the tactile behavior of a lightweight chair.",
+          "A speculative monument for protest and dialogue, designed to hold collective memory around colonial histories and shifting public opinion.",
         details: [
           { label: "Studio", value: "McGill University SoA" },
-          { label: "Course", value: "ARCH 202 Design and Construction 1" },
-          { label: "Instructor", value: "David Covo" },
-          { label: "Pages", value: "20-21" }
+          { label: "Course", value: "ARCH 406 Design and Construction 4" },
+          { label: "Instructor", value: "Ipek Tureli" },
+          { label: "Collaboration", value: "revised with Zhi Lin" },
+          { label: "Pages", value: "02-07" }
         ],
-        tags: ["Furniture", "Prototype", "Construction", "Material study"],
-        cover: image("Architecture", architecturePrefix, 20),
-        images: range("Architecture", architecturePrefix, 20, 21),
-        needsCorrection: false
-      },
-      {
-        slug: "net-zero-mix-use",
-        title: "Net-Zero Mix-Use",
-        subtitle: "Passive systems, energy strategies, and mixed-use urban living.",
-        category: "Architecture",
-        season: "Winter 2019",
-        year: 2019,
-        location: "Montreal, Canada",
-        summary:
-          "A mixed-use proposal shaped by solar access, wind behavior, and green technology, balancing residential life with environmental performance.",
-        details: [
-          { label: "Studio", value: "McGill University SoA" },
-          { label: "Course", value: "ARCH 304 Design and Construction 3" },
-          { label: "Instructor", value: "Avi Friedman" },
-          { label: "Collaboration", value: "with Yijia Du" },
-          { label: "Pages", value: "13-19" }
-        ],
-        tags: ["Net zero", "Housing", "Climate", "Mixed use"],
-        cover: image("Architecture", architecturePrefix, 13),
-        images: range("Architecture", architecturePrefix, 13, 19),
+        tags: ["Public space", "Pavilion", "Collective memory", "Civic design"],
+        cover: image("Architecture", architecturePrefix, 2),
+        images: range("Architecture", architecturePrefix, 2, 7),
         needsCorrection: false
       },
       {
@@ -82,67 +65,69 @@
         needsCorrection: false
       },
       {
-        slug: "living-monument",
-        title: "The Living Monument",
-        subtitle: "A temporary civic pavilion that reframes contested memory in public space.",
+        slug: "net-zero-mix-use",
+        title: "Net-Zero Mix-Use",
+        subtitle: "Passive systems, energy strategies, and mixed-use urban living.",
         category: "Architecture",
-        season: "Winter 2021",
-        year: 2021,
-        location: "Place d'Armes, Montreal",
+        season: "Winter 2019",
+        year: 2019,
+        location: "Montreal, Canada",
         summary:
-          "A speculative monument for protest and dialogue, designed to hold collective memory around colonial histories and shifting public opinion.",
+          "A mixed-use proposal shaped by solar access, wind behavior, and green technology, balancing residential life with environmental performance.",
         details: [
           { label: "Studio", value: "McGill University SoA" },
-          { label: "Course", value: "ARCH 406 Design and Construction 4" },
-          { label: "Instructor", value: "Ipek Tureli" },
-          { label: "Collaboration", value: "revised with Zhi Lin" },
-          { label: "Pages", value: "02-07" }
+          { label: "Course", value: "ARCH 304 Design and Construction 3" },
+          { label: "Instructor", value: "Avi Friedman" },
+          { label: "Collaboration", value: "with Yijia Du" },
+          { label: "Pages", value: "13-19" }
         ],
-        tags: ["Public space", "Pavilion", "Collective memory", "Civic design"],
-        cover: image("Architecture", architecturePrefix, 2),
-        images: range("Architecture", architecturePrefix, 2, 7),
+        tags: ["Net zero", "Housing", "Climate", "Mixed use"],
+        cover: image("Architecture", architecturePrefix, 13),
+        images: range("Architecture", architecturePrefix, 13, 19),
         needsCorrection: false
       },
       {
-        slug: "biotic-door",
-        title: "Biotic Door",
-        subtitle: "An interactive installation for lilong life, thresholds, and social catalysts.",
-        category: "Computation",
-        season: "Fall 2023",
-        year: 2023,
-        location: "Shanghai, China",
+        slug: "moodbox",
+        title: "MoodBox",
+        subtitle: "A light-and-shadow installation developed through angular form studies.",
+        category: "Architecture",
+        season: "Fall 2018",
+        year: 2018,
+        location: "Montreal, Canada",
         summary:
-          "A responsive art installation and prototyping study that transforms the traditional lilong doorway into a sensor-driven social threshold.",
+          "A compact installation study that uses folded planes, spot lighting, and shadow projection to produce an atmospheric object.",
         details: [
-          { label: "Format", value: "Art installation + prototype" },
-          { label: "Role", value: "Prototyping, manufacture, Arduino design, site installation" },
-          { label: "Group member", value: "Liu Qingyun" },
-          { label: "Pages", value: "11-17" }
+          { label: "Studio", value: "McGill University SoA" },
+          { label: "Course", value: "ARCH 202 Design and Construction 1" },
+          { label: "Instructor", value: "David Covo" },
+          { label: "Collaboration", value: "with Yuxuan Wu" },
+          { label: "Pages", value: "21" }
         ],
-        tags: ["Interactive art", "Lilong", "Arduino", "Threshold"],
-        cover: image("Computation", computationPrefix, 11),
-        images: range("Computation", computationPrefix, 11, 17),
-        needsCorrection: true
+        tags: ["Lighting", "Installation", "Model", "Shadow study"],
+        cover: image("Architecture", architecturePrefix, 21),
+        images: single("Architecture", architecturePrefix, 21),
+        needsCorrection: false
       },
       {
-        slug: "catalytic-resonance",
-        title: "Catalytic Resonance",
-        subtitle: "A revitalization study for traditional lilong thresholds and social exchange.",
-        category: "Computation",
-        season: "2024",
-        year: 2024,
-        location: "Shanghai, China",
+        slug: "folding-fold-chair",
+        title: "Folding Fold Chair",
+        subtitle: "A compact furniture study exploring simple joints, collapse, and reuse.",
+        category: "Architecture",
+        season: "Fall 2018",
+        year: 2018,
+        location: "Montreal, Canada",
         summary:
-          "A research-led proposal that rethinks the lilong threshold as a catalytic social device, supported by field observations, classification, and spatial testing.",
+          "An early construction studio exercise focused on folding logic, efficient assembly, and the tactile behavior of a lightweight chair.",
         details: [
-          { label: "Format", value: "Urban research + spatial intervention" },
-          { label: "Focus", value: "Revitalization of traditional lilong threshold" },
-          { label: "Pages", value: "18-20" }
+          { label: "Studio", value: "McGill University SoA" },
+          { label: "Course", value: "ARCH 202 Design and Construction 1" },
+          { label: "Instructor", value: "David Covo" },
+          { label: "Pages", value: "20" }
         ],
-        tags: ["Urban renewal", "Threshold", "Classification", "Shanghai"],
-        cover: image("Computation", computationPrefix, 18),
-        images: range("Computation", computationPrefix, 18, 20),
-        needsCorrection: true
+        tags: ["Furniture", "Prototype", "Construction", "Material study"],
+        cover: image("Architecture", architecturePrefix, 20),
+        images: single("Architecture", architecturePrefix, 20),
+        needsCorrection: false
       },
       {
         slug: "citywalk-sentiment",
@@ -163,7 +148,48 @@
         tags: ["EEG", "NLP", "Computer vision", "Urban renewal"],
         cover: image("Computation", computationPrefix, 2),
         images: range("Computation", computationPrefix, 2, 10),
-        needsCorrection: true
+        needsCorrection: false
+      },
+      {
+        slug: "biotic-door",
+        title: "Biotic Door",
+        subtitle: "An interactive installation for lilong life, thresholds, and social catalysts.",
+        category: "Computation",
+        season: "Fall 2023 - 2024",
+        year: 2024,
+        location: "Shanghai, China",
+        summary:
+          "A responsive installation study that transforms the traditional lilong doorway into a sensor-driven social threshold, extended here as a continuous page sequence from C11 to C18.",
+        details: [
+          { label: "Format", value: "Art installation + prototype" },
+          { label: "Role", value: "Prototyping, manufacture, Arduino design, site installation" },
+          { label: "Group member", value: "Liu Qingyun" },
+          { label: "Pages", value: "11-18" }
+        ],
+        tags: ["Interactive art", "Lilong", "Arduino", "Threshold"],
+        cover: image("Computation", computationPrefix, 11),
+        images: range("Computation", computationPrefix, 11, 18),
+        needsCorrection: false
+      },
+      {
+        slug: "catalytic-resonance",
+        title: "Catalytic Resonance",
+        subtitle: "A revitalization study for traditional lilong thresholds and social exchange.",
+        category: "Computation",
+        season: "2024",
+        year: 2024,
+        location: "Shanghai, China",
+        summary:
+          "A research-led proposal that rethinks the lilong threshold as a catalytic social device, focusing here on the classification and interaction studies shown on pages C19-C20.",
+        details: [
+          { label: "Format", value: "Urban research + spatial intervention" },
+          { label: "Focus", value: "Revitalization of traditional lilong threshold" },
+          { label: "Pages", value: "19-20" }
+        ],
+        tags: ["Urban renewal", "Threshold", "Classification", "Shanghai"],
+        cover: image("Computation", computationPrefix, 19),
+        images: range("Computation", computationPrefix, 19, 20),
+        needsCorrection: false
       }
     ]
   };

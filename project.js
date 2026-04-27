@@ -32,6 +32,7 @@
   var galleryNode = document.getElementById("project-gallery");
   var pagerNode = document.getElementById("project-pagination");
   var relatedNode = document.getElementById("related-projects");
+  var lightbox = window.PORTFOLIO_LIGHTBOX;
 
   function assetPath(path) {
     return new URL("../" + path, window.location.href).toString();
@@ -225,5 +226,8 @@
   renderGallery();
   renderPagination();
   renderRelated();
+  if (lightbox) {
+    lightbox.bindImageZoom(document);
+  }
   observeReveal();
 })();

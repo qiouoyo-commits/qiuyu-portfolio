@@ -11,6 +11,7 @@
 portfolio-site/
 ├── index.html
 ├── index.js
+├── lightbox.js
 ├── project.js
 ├── data.js
 ├── styles.css
@@ -105,26 +106,26 @@ gh api repos/qiouoyo-commits/qiuyu-portfolio/pages/builds/latest
 - `Architecture/` 和 `Computation/` 必须存在于 `portfolio-site/` 内。
 - 如果只是本地上层目录里有图，而仓库里没有，GitHub Pages 一定会显示不出来。
 
-### 3. 路径必须是站点内部相对路径
+### 3. 路径必须留在仓库子路径内
 
-当前页面依赖 `data-root` 来拼图片路径：
+当前脚本会基于当前页面 URL 自动生成站内资源地址，核心逻辑在：
 
-- 首页 [index.html](/Users/grandpapa/Desktop/Personal%20INFO/portfolio-site/index.html:15) 使用 `data-root="."`
-- 项目页 `projects/*.html` 使用 `data-root=".."`
+- [index.js](/Users/grandpapa/Desktop/Personal%20INFO/portfolio-site/index.js:22)
+- [project.js](/Users/grandpapa/Desktop/Personal%20INFO/portfolio-site/project.js:31)
 
-不要把它们改成：
+如果以后再改图片或页面链接，目标必须仍然落在：
 
-- 首页 `..`
-- 项目页 `../..`
+- `https://qiouoyo-commits.github.io/qiuyu-portfolio/...`
 
-那样会把图片地址解析到仓库目录外，线上会再次丢图。
+不要手动改成指向仓库外层的地址，否则 GitHub Pages 会再次丢图。
 
 ### 4. 资源缓存会让你误以为“没更新”
 
 当前 HTML 对 CSS/JS 使用了版本参数，例如：
 
-- `styles.css?v=20260427-1`
-- `data.js?v=20260427-1`
+- `styles.css?v=20260427-3`
+- `data.js?v=20260427-3`
+- `lightbox.js?v=20260427-3`
 
 如果你改了 `styles.css`、`index.js`、`project.js`、`data.js`，但线上像没变化：
 
@@ -134,16 +135,16 @@ gh api repos/qiouoyo-commits/qiuyu-portfolio/pages/builds/latest
 例如从：
 
 ```html
-<script defer src="./index.js?v=20260427-1"></script>
+<script defer src="./index.js?v=20260427-3"></script>
 ```
 
 改成：
 
 ```html
-<script defer src="./index.js?v=20260427-2"></script>
+<script defer src="./index.js?v=20260427-4"></script>
 ```
 
-项目页里的 `project.js`、`data.js`、`styles.css` 也要同步改版本号。
+项目页里的 `project.js`、`lightbox.js`、`data.js`、`styles.css` 也要同步改版本号。
 
 ### 5. 时间线顺序现在是倒叙
 
@@ -167,19 +168,23 @@ gh api repos/qiouoyo-commits/qiuyu-portfolio/pages/builds/latest
 - `category`
 - `cover`
 - `images`
-- `needsCorrection`
+- `slug`
 
-### 7. Computation 图片方向修正依赖数据标记
+### 7. Computation 图片现在直接在资源层修正
 
-部分 computation 图片在线上是通过页面样式自动修正方向的，不是直接改原图。
+当前 computation 图片已经直接写回 `Computation/` 目录，不再依赖前端自动翻转。
 
-相关字段在 `data.js`：
+如果以后还要继续批量做“上下 mirror”，在仓库根目录运行：
 
-```js
-needsCorrection: true
+```bash
+for f in Computation/*.jpg; do
+  tmp=$(mktemp /tmp/compflipXXXXXX.jpg)
+  sips -f vertical "$f" --out "$tmp" >/dev/null
+  mv "$tmp" "$f"
+done
 ```
 
-如果你把某个 computation 项目改成不需要自动旋转/镜像，记得同步检查前端显示效果。
+做完之后一定要本地检查，再 `git add` / `git commit` / `git push`。
 
 ### 8. 新增项目的最小步骤
 
@@ -188,6 +193,21 @@ needsCorrection: true
 3. 在 `projects/` 中新增对应的 `slug.html`
 4. 本地预览首页、详情页、翻页、图片
 5. `git add` / `git commit` / `git push`
+
+### 9. 所有图片支持点击放大
+
+当前放大功能由 [lightbox.js](/Users/grandpapa/Desktop/Personal%20INFO/portfolio-site/lightbox.js:1) 提供，并在：
+
+- [index.js](/Users/grandpapa/Desktop/Personal%20INFO/portfolio-site/index.js:25)
+- [project.js](/Users/grandpapa/Desktop/Personal%20INFO/portfolio-site/project.js:34)
+
+中绑定。
+
+如果以后新增页面，记得同时引入：
+
+```html
+<script defer src="../lightbox.js?v=20260427-3"></script>
+```
 
 ## 常见排查命令
 

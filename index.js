@@ -21,6 +21,7 @@
   var filtersNode = document.getElementById("filters");
   var timelineNode = document.getElementById("timeline");
   var statsNode = document.getElementById("hero-stats");
+  var lightbox = window.PORTFOLIO_LIGHTBOX;
   var currentFilter = "All";
 
   function assetPath(path) {
@@ -112,6 +113,9 @@
 
   function renderTimeline() {
     timelineNode.innerHTML = projects.map(createTimelineCard).join("");
+    if (lightbox) {
+      lightbox.bindImageZoom(timelineNode);
+    }
     observeReveal();
   }
 
