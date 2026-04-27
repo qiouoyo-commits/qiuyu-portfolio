@@ -71,6 +71,9 @@
 
   function renderSidebar() {
     var details = project.details
+      .filter(function (item) {
+        return item.label !== "Pages";
+      })
       .map(function (item) {
         return (
           '<div class="detail-row">' +
@@ -121,9 +124,6 @@
           '<div class="page-frame__image">' +
           '<img class="' + correctedClass().trim() + '" src="' + assetPath(src) + '" alt="' + project.title + ' page ' + String(index + 1) + '" loading="' + eager + '" />' +
           "</div>" +
-          '<figcaption class="page-num">Portfolio page ' +
-          src.match(/_(\d+)\.jpg$/)[1] +
-          "</figcaption>" +
           "</figure>"
         );
       })
