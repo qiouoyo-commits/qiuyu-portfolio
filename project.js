@@ -5,7 +5,6 @@
   }
 
   var slug = document.body.dataset.project;
-  var root = document.body.dataset.root || ".";
   var projects = site.projects
     .map(function (project, index) {
       return { project: project, index: index };
@@ -35,11 +34,11 @@
   var relatedNode = document.getElementById("related-projects");
 
   function assetPath(path) {
-    return root + "/" + path;
+    return new URL("../" + path, window.location.href).toString();
   }
 
   function projectPath(projectSlug) {
-    return "./" + projectSlug + ".html";
+    return new URL("./" + projectSlug + ".html", window.location.href).toString();
   }
 
   function categoryChip(category) {

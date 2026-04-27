@@ -18,18 +18,17 @@
     .map(function (item) {
       return item.project;
     });
-  var root = document.body.dataset.root || ".";
   var filtersNode = document.getElementById("filters");
   var timelineNode = document.getElementById("timeline");
   var statsNode = document.getElementById("hero-stats");
   var currentFilter = "All";
 
   function assetPath(path) {
-    return root + "/" + path;
+    return new URL(path, window.location.href).toString();
   }
 
   function projectPath(slug) {
-    return "./projects/" + slug + ".html";
+    return new URL("./projects/" + slug + ".html", window.location.href).toString();
   }
 
   function pillClass(category) {
