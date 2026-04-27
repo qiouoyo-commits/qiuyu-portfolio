@@ -4,7 +4,20 @@
     return;
   }
 
-  var projects = site.projects.slice();
+  var projects = site.projects
+    .map(function (project, index) {
+      return { project: project, index: index };
+    })
+    .sort(function (left, right) {
+      if (left.project.year !== right.project.year) {
+        return right.project.year - left.project.year;
+      }
+
+      return right.index - left.index;
+    })
+    .map(function (item) {
+      return item.project;
+    });
   var root = document.body.dataset.root || ".";
   var filtersNode = document.getElementById("filters");
   var timelineNode = document.getElementById("timeline");
