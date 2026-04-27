@@ -6,7 +6,20 @@
 
   var slug = document.body.dataset.project;
   var root = document.body.dataset.root || ".";
-  var projects = site.projects.slice();
+  var projects = site.projects
+    .map(function (project, index) {
+      return { project: project, index: index };
+    })
+    .sort(function (left, right) {
+      if (left.project.year !== right.project.year) {
+        return right.project.year - left.project.year;
+      }
+
+      return right.index - left.index;
+    })
+    .map(function (item) {
+      return item.project;
+    });
   var project = projects.find(function (item) {
     return item.slug === slug;
   });
