@@ -174,19 +174,19 @@
       {
         slug: "catalytic-resonance",
         title: "Catalytic Resonance",
-        subtitle: "A revitalization study for traditional lilong thresholds and social exchange.",
+        subtitle: "Door classification and interaction variations for revitalizing lilong thresholds.",
         category: "Computation",
         season: "2024",
         year: 2024,
         location: "Shanghai, China",
         summary:
-          "A research-led proposal that rethinks the lilong threshold as a catalytic social device, focusing here on the classification and interaction studies shown on pages C19-C20.",
+          "A focused follow-up study that classifies lilong door conditions and tests how different motion, sensing, and visibility scenarios can activate threshold space as a social interface.",
         details: [
-          { label: "Format", value: "Urban research + spatial intervention" },
-          { label: "Focus", value: "Revitalization of traditional lilong threshold" },
+          { label: "Format", value: "Door taxonomy + interaction variation study" },
+          { label: "Focus", value: "Social activation strategies for lilong thresholds" },
           { label: "Pages", value: "19-20" }
         ],
-        tags: ["Urban renewal", "Threshold", "Classification", "Shanghai"],
+        tags: ["Threshold taxonomy", "Interaction design", "Lilong", "Shanghai"],
         cover: image("Computation", computationPrefix, 19),
         images: range("Computation", computationPrefix, 19, 20),
         needsCorrection: false
