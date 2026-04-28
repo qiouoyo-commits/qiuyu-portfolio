@@ -183,6 +183,36 @@ button {
   flex-wrap: wrap;
 }
 
+.hero-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 1rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--ink);
+  background: var(--ink);
+  color: #faf7f2;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+
+.hero-cta::after {
+  content: "↗";
+  font-size: 1rem;
+}
+
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  transform: translateY(-2px);
+  background: #26211c;
+  box-shadow: 0 16px 40px rgba(38, 28, 18, 0.18);
+}
+
 .hero-chip,
 .detail-chip,
 .nav-chip {
