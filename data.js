@@ -267,6 +267,7 @@
         category: "Computation",
         season: "2017",
         year: 2017,
+        displayYear: "0000",
         location: "Process archive",
         summary:
           "A single-frame archive image that gathers Rhino modeling, numerical traces, and fabrication output into one condensed record of an already-explored workflow.",

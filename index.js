@@ -108,6 +108,7 @@
 
   function createTimelineCard(project) {
     var correctedClass = project.needsCorrection ? " asset--corrected" : "";
+    var timelineYear = project.displayYear || project.year;
     var tags = project.tags
       .slice(0, 3)
       .map(function (tag) {
@@ -119,7 +120,7 @@
       '<article class="timeline-item is-reveal" data-category="' + project.category + '">' +
       '<div class="timeline-marker">' +
       '<div class="timeline-dot"></div>' +
-      '<div class="timeline-year">' + project.year + "</div>" +
+      '<div class="timeline-year">' + timelineYear + "</div>" +
       "</div>" +
       '<a class="timeline-card" href="' + projectPath(project.slug) + '">' +
       '<div class="timeline-card__media">' +
