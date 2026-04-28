@@ -261,6 +261,34 @@
         needsCorrection: false
       },
       {
+        slug: "taste-matrix",
+        title: "TasteMatrix",
+        subtitle: "A computer-vision food study linking oral processing, layered flavor, and taste timing.",
+        category: "Computation",
+        season: "2024",
+        year: 2024,
+        location: "Food behavior research",
+        summary:
+          "A research project developed from the FoodOralSense article, pairing a three-layer jelly model with SAM-based bolus recognition, ResNet50 classification, and TDS timelines to show how chewing direction reshapes both physical breakdown and perceived flavor dominance.",
+        details: [
+          { label: "Format", value: "Research paper + analysis system" },
+          { label: "Paper", value: "FoodOralSense: A Computer Vision-based Food Oral Processing Behavior Analysis System" },
+          { label: "Methods", value: "SAM segmentation, ResNet50 classification, TDS sensory analysis" },
+          { label: "Sample", value: "24 x 24 x 24 mm three-layer jelly with sour, bitter, and sweet layers" },
+          { label: "Outcome", value: "1,704 bolus instances analyzed with 98.0% recognition accuracy" }
+        ],
+        tags: ["Food science", "Computer vision", "TDS", "Behavior analysis"],
+        cover: "TasteMatrix/result_figure_landscape_square_noarrows_matrixchecked.png",
+        images: [
+          "TasteMatrix/TasteMatrix-01.png",
+          "TasteMatrix/flowchart_figure_current_pipeline.png",
+          "TasteMatrix/TasteMatrix-00.jpg",
+          "TasteMatrix/result_figure_landscape_square_noarrows_matrixchecked.png",
+          "TasteMatrix/tds_06_summary_figure.png"
+        ],
+        needsCorrection: false
+      },
+      {
         slug: "explored",
         title: "Explored",
         subtitle: "A geometry-and-fabrication snapshot linking modeling, data, and material output.",
