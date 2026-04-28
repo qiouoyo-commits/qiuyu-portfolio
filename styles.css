@@ -186,16 +186,18 @@ button {
 .hero-cta {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.8rem;
-  width: 100%;
-  padding: 1rem 1.1rem;
+  justify-content: center;
+  justify-self: start;
+  gap: 0.6rem;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0.78rem 0.98rem;
   border-radius: 999px;
   border: 1px solid var(--ink);
   background: var(--ink);
   color: #faf7f2;
   font-family: "IBM Plex Mono", monospace;
-  font-size: 0.76rem;
+  font-size: 0.92rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
