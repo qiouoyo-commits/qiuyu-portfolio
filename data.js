@@ -249,7 +249,7 @@
           { label: "Pages", value: "01-06" }
         ],
         tags: ["Eye-tracking", "EMG", "Motion capture", "Dance analysis"],
-        cover: "DanceStudy/Dance00-screen.png",
+        cover: "DanceStudy/Dance01-screen.png",
         images: [
           "DanceStudy/Dance00-screen.png",
           "DanceStudy/Dance01-screen.png",
