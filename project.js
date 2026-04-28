@@ -4,12 +4,31 @@
     return;
   }
 
+  function projectOrderBucket(project) {
+    if (project.pinnedPosition === "top") {
+      return 2;
+    }
+
+    if (project.pinnedPosition === "bottom") {
+      return 0;
+    }
+
+    return 1;
+  }
+
   var slug = document.body.dataset.project;
   var projects = site.projects
     .map(function (project, index) {
       return { project: project, index: index };
     })
     .sort(function (left, right) {
+      var leftBucket = projectOrderBucket(left.project);
+      var rightBucket = projectOrderBucket(right.project);
+
+      if (leftBucket !== rightBucket) {
+        return rightBucket - leftBucket;
+      }
+
       if (left.project.year !== right.project.year) {
         return right.project.year - left.project.year;
       }

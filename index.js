@@ -4,11 +4,30 @@
     return;
   }
 
+  function projectOrderBucket(project) {
+    if (project.pinnedPosition === "top") {
+      return 2;
+    }
+
+    if (project.pinnedPosition === "bottom") {
+      return 0;
+    }
+
+    return 1;
+  }
+
   var projects = site.projects
     .map(function (project, index) {
       return { project: project, index: index };
     })
     .sort(function (left, right) {
+      var leftBucket = projectOrderBucket(left.project);
+      var rightBucket = projectOrderBucket(right.project);
+
+      if (leftBucket !== rightBucket) {
+        return rightBucket - leftBucket;
+      }
+
       if (left.project.year !== right.project.year) {
         return right.project.year - left.project.year;
       }
@@ -37,9 +56,19 @@
   }
 
   function renderStats() {
+    var years = projects
+      .map(function (project) {
+        return project.year;
+      })
+      .filter(function (year) {
+        return typeof year === "number";
+      });
+    var minYear = Math.min.apply(null, years);
+    var maxYear = Math.max.apply(null, years);
+    var timelineRange = minYear === maxYear ? String(maxYear) : String(minYear) + "-" + String(maxYear);
     var values = [
       { value: String(projects.length), label: "Projects" },
-      { value: "2018-2024", label: "Timeline" },
+      { value: timelineRange, label: "Timeline" },
       { value: "2", label: "Disciplines" }
     ];
 

@@ -21,6 +21,31 @@
     strapline: "Spatial systems, computational tools, and civic atmospheres.",
     projects: [
       {
+        slug: "exploring",
+        title: "Exploring",
+        subtitle: "An interface prototype for subject extraction, image pairing, and workflow tests.",
+        category: "Computation",
+        season: "2025",
+        year: 2025,
+        location: "Prototype study",
+        summary:
+          "A three-screen interface exploration that tests upload, extraction, and paired image-output workflows for a lightweight visual tool.",
+        details: [
+          { label: "Format", value: "Interface prototype" },
+          { label: "Focus", value: "Subject extraction and paired output workflow" },
+          { label: "Pages", value: "01-03" }
+        ],
+        tags: ["Prototype", "Workflow", "Interface", "Image processing"],
+        cover: "Exploring/Exploring-01.jpg",
+        images: [
+          "Exploring/Exploring-01.jpg",
+          "Exploring/Exploring-02.jpg",
+          "Exploring/Exploring-03.jpg"
+        ],
+        pinnedPosition: "top",
+        needsCorrection: false
+      },
+      {
         slug: "living-monument",
         title: "The Living Monument",
         subtitle: "A temporary civic pavilion that reframes contested memory in public space.",
@@ -233,6 +258,27 @@
           "DanceStudy/Dance04-screen.png",
           "DanceStudy/Dance05-screen.png"
         ],
+        needsCorrection: false
+      },
+      {
+        slug: "explored",
+        title: "Explored",
+        subtitle: "A geometry-and-fabrication snapshot linking modeling, data, and material output.",
+        category: "Computation",
+        season: "2017",
+        year: 2017,
+        location: "Process archive",
+        summary:
+          "A single-frame archive image that gathers Rhino modeling, numerical traces, and fabrication output into one condensed record of an already-explored workflow.",
+        details: [
+          { label: "Format", value: "Process archive" },
+          { label: "Focus", value: "Geometry, toolpath logic, and fabrication feedback" },
+          { label: "Pages", value: "01" }
+        ],
+        tags: ["Rhino", "Fabrication", "Geometry", "Archive"],
+        cover: "Explored/Explored-00.png",
+        images: ["Explored/Explored-00.png"],
+        pinnedPosition: "bottom",
         needsCorrection: false
       }
     ]
