@@ -275,10 +275,11 @@
           { label: "Paper", value: "FoodOralSense: A Computer Vision-based Food Oral Processing Behavior Analysis System" },
           { label: "Methods", value: "SAM segmentation, ResNet50 classification, TDS sensory analysis" },
           { label: "Sample", value: "24 x 24 x 24 mm three-layer jelly with sour, bitter, and sweet layers" },
-          { label: "Outcome", value: "1,704 bolus instances analyzed with 98.0% recognition accuracy" }
+          { label: "Outcome", value: "1,704 bolus instances analyzed with 98.0% recognition accuracy" },
+          { label: "Result analysis", value: "Directional chewing tests revealed a clear structure-perception link: coconut became more dominant in Direction X, coffee appeared later in X than Y, and lemon showed the strongest physical breakdown in Direction Z without an equally strong shift in taste dominance." }
         ],
         tags: ["Food science", "Computer vision", "TDS", "Behavior analysis"],
-        cover: "TasteMatrix/result_figure_landscape_square_noarrows_matrixchecked.png",
+        cover: "TasteMatrix/TasteMatrix-00.jpg",
         images: [
           "TasteMatrix/TasteMatrix-01.png",
           "TasteMatrix/flowchart_figure_current_pipeline.png",
