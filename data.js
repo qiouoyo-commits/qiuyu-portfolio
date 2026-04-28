@@ -188,7 +188,22 @@
         ],
         tags: ["Urban renewal", "Threshold", "Classification", "Shanghai"],
         cover: image("Computation", computationPrefix, 19),
-        images: range("Computation", computationPrefix, 19, 20),
+        images: range("Computation", computationPrefix, 19, 20).concat([
+          "LandMark/LandMark-01.png",
+          "LandMark/LandMark-02.png",
+          "LandMark/LandMark-03.png",
+          "LandMark/LandMark-04.png",
+          "LandMark/LandMark-05.png",
+          "LandMark/LandMark-06.png",
+          "LandMark/LandMark-07.png",
+          "LandMark/LandMark-08.png",
+          "LandMark/LandMark-09.png",
+          "LandMark/LandMark-10.png",
+          "LandMark/LandMark-11.png",
+          "LandMark/LandMark-12.png",
+          "LandMark/LandMark-13.png",
+          "LandMark/LandMark-14.png"
+        ]),
         needsCorrection: false
       },
       {
