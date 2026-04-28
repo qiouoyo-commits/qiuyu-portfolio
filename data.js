@@ -190,6 +190,35 @@
         cover: image("Computation", computationPrefix, 19),
         images: range("Computation", computationPrefix, 19, 20),
         needsCorrection: false
+      },
+      {
+        slug: "the-chasse",
+        title: "The Chasse",
+        subtitle: "Environmental nudges via eye-tracking and bio-sensory measures.",
+        category: "Computation",
+        season: "Summer 2024",
+        year: 2024,
+        location: "DigitalFUTURES 2024",
+        summary:
+          "A workshop research project that studies how dance projection, kinesthetic response, and canon movement can encourage spontaneous exercise through eye-tracking, motion capture, and EMG-informed analysis.",
+        details: [
+          { label: "Format", value: "Workshop research + poster" },
+          { label: "Event", value: "14th DigitalFUTURES Summer Workshops" },
+          { label: "Methods", value: "Eye-tracking, motion capture, electromyography (EMG)" },
+          { label: "Collaboration", value: "with Ying Qi, Ziyi Chen, Yuanjing Hu, Shiyao Xu, Daoxin Chen, and Jing Zhao" },
+          { label: "Pages", value: "01-06" }
+        ],
+        tags: ["Eye-tracking", "EMG", "Motion capture", "Dance analysis"],
+        cover: "DanceStudy/Dance00-screen.png",
+        images: [
+          "DanceStudy/Dance00-screen.png",
+          "DanceStudy/Dance01-screen.png",
+          "DanceStudy/Dance02-screen.png",
+          "DanceStudy/Dance03-screen.png",
+          "DanceStudy/Dance04-screen.png",
+          "DanceStudy/Dance05-screen.png"
+        ],
+        needsCorrection: false
       }
     ]
   };

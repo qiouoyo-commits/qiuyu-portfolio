@@ -55,8 +55,19 @@ http://localhost:8000/
 1. 修改 `data.js`、HTML、CSS 或图片资源。
 2. 本地启动静态服务器检查页面。
 3. 确认首页、详情页、图片都正常后再提交。
+4. 每一次有效更新都必须继续 `git push` 到 `main`，让 GitHub Pages 同步上线；只在本地改完不算完成。
 
 ## 推送指南
+
+### 强制规则
+
+每次更新这个站点时，最终步骤都必须包含：
+
+1. 提交改动到 Git
+2. 推送到 GitHub 远程仓库 `main`
+3. 确认 GitHub Pages 构建完成
+
+也就是说，任何页面、数据、样式、脚本或图片资源的修改，只有在 GitHub Pages 成功更新后，才算真正完成。
 
 ### 查看当前状态
 
@@ -81,6 +92,7 @@ git push
 - Folder: `/` root
 
 也就是说，只要把改动 push 到 `main`，GitHub Pages 就会自动重新构建。
+以后默认把“更新完成”定义为：本地检查通过，且改动已经 push 到 `main` 并由 GitHub Pages 发布成功。
 
 ### 检查 Pages 是否发布完成
 
@@ -239,6 +251,7 @@ rg -n 'styles.css|data.js|index.js|project.js' index.html projects/*.html
 ## 推荐习惯
 
 - 每次改完先本地看首页和至少一个项目详情页。
+- 每次改动都必须 push 到 GitHub Pages，不要把“只改了本地”当作完成状态。
 - 每次推送后等 Pages 变成 `built` 再验证线上页面。
 - 改路径、图片、排序逻辑时，优先检查首页和详情页是否同时一致。
 - 做结构性修改前先提交一个小版本，方便回看。
